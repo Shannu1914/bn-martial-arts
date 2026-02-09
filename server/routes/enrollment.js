@@ -2,6 +2,8 @@ const express = require('express');
 const router = express.Router();
 const { db } = require('../db');
 const auth = require('../middleware/authMiddleware');
+const authMiddleware = require('../middleware/authMiddleware');
+
 
 /* PUBLIC: submit enrollment */
 router.post('/', (req, res) => {
