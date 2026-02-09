@@ -1,0 +1,173 @@
+body { font-family: system-ui, Arial; margin:0; background:#fafafa; color:#222; }
+/* ===== HEADER / NAVBAR ===== */
+.nav {
+  background-color: #000 !important;
+  color: #fff !important; 
+  position: sticky;
+  top: 0;
+  z-index: 1000; 
+  padding: 14px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Company name */
+.nav .brand {
+  font-size: 22px;
+  font-weight: 700;
+  color: #fff !important;
+  letter-spacing: 1px;
+}
+
+/* Buttons container */
+.nav-links {
+  display: flex;
+  gap: 12px;
+}
+
+/* Nav buttons */
+.nav-links button {
+  background: transparent !important;
+  border: 1px solid #fff !important;
+  color: #fff !important;          /* white */
+  padding: 8px 14px;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+/* Hover effect */
+.nav-links button:hover {
+  background: #fff !important;
+  color: #000 !important;
+}
+
+
+.gallery { display:flex; flex-wrap:wrap; gap:12px; }
+.card { width:180px; border:1px solid #ddd; border-radius:6px; overflow:hidden; background:#fff; }
+.thumb { width:100%; height:140px; object-fit:cover; display:block; }
+.thumb.placeholder { display:flex; height:140px; background:#eee; align-items:center; justify-content:center; color:#777; }
+.card-body { padding:8px; font-size:14px; }
+.admin-form input, .admin-form button { display:block; margin:8px 0; padding:8px; width:100%; max-width:420px; }
+.danger { background:#d9534f; color:#fff; border:none; padding:6px 8px; cursor:pointer; }
+/* Page layout */
+.page-wrapper {
+  min-height: 100vh;           /* full viewport height */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Main content expands */
+.container {
+  flex: 1;                     /* pushes footer down */
+  padding: 24px;
+  padding-bottom: 64px; /* footer height + spacing */
+}
+
+/* Fixed footer */
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 48px;
+  background: #000;
+  color: #fff;
+  text-align: center;
+  line-height: 48px;
+  font-size: 14px;
+  z-index: 1000;
+}
+
+
+.enroll-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.enroll-table th,
+.enroll-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.enroll-table th {
+  background: #f2f2f2;
+}
+
+.admin-theme {
+  background: #0f172a;
+  color: #f8fafc;
+}
+
+.admin-theme .nav {
+  background: #020617;
+}
+
+.student-theme {
+  background: #f8fafc;
+  color: #020617;
+}
+
+.student-theme .nav {
+  background: #ffffff;
+}
+
+/* Home hero */
+.hero {
+  text-align: center;
+  padding: 32px 16px;
+}
+
+/* Section title */
+.section-title {
+  margin: 24px 0 16px;
+  font-size: 20px;
+}
+
+/* Student grid */
+.student-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 16px;
+}
+
+/* Student card */
+.student-card {
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  text-align: center;
+}
+
+/* Student image */
+.student-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+/* No photo placeholder */
+.no-photo {
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #e5e7eb;
+  color: #555;
+}
+
+/* Student info */
+.student-info {
+  padding: 10px;
+}
+
+.muted {
+  font-size: 13px;
+  color: #666;
+}
