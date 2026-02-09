@@ -13,7 +13,9 @@ const PORT = process.env.PORT || 4000;
 // initialize DB schema if not exist
 init();
 
-app.use(cors());
+app.use(cors({
+  origin: "https://bn-martial-arts-143.onrender.com"
+}));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
