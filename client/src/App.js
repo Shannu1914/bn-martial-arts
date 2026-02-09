@@ -33,12 +33,18 @@ function App() {
               <button onClick={()=>setPage('login')}>Login</button>
               <button onClick={()=>setPage('register')}>Register</button>
             </>
+          ) : role === 'admin' ? (
+            <>
+              <button onClick={()=>setPage('admin')}>Admin Dashboard</button>
+              <button onClick={logout}>Logout</button>
+            </>
           ) : (
             <>
-              <button onClick={()=>setPage('dashboard')}>Dashboard</button>
+              <button onClick={()=>setPage('student')}>My Dashboard</button>
               <button onClick={logout}>Logout</button>
             </>
           )}
+
 
         </div>
       </nav>
@@ -53,9 +59,12 @@ function App() {
           localStorage.setItem('role', r);
           setPage('dashboard');
         }} />}        
-        {page === 'register' && <Register />}
+        {page === 'register' && <Register onRegistered={()=>setPage('login')} />}
         {page === 'dashboard' && role === 'admin' && <AdminDashboard token={token} />}
         {page === 'dashboard' && role === 'student' && <StudentDashboard />}
+        {page === 'student' && token && role === 'student' && (
+          <StudentDashboard token={token} />
+        )}
       </main>
 
       <footer className="footer">

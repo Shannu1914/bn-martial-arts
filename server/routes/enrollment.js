@@ -42,5 +42,12 @@ router.get('/', auth, (req, res) => {
     }
   );
 });
+router.get('/mine', authMiddleware, (req, res) => {
+  db.all(
+    'SELECT * FROM enrollments WHERE user_id = ?',
+    [req.user.id],
+    (err, rows) => res.json(rows)
+  );
+});
 
 module.exports = router;

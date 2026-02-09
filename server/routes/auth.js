@@ -32,4 +32,12 @@ router.post('/login', (req, res) => {
   );
 });
 
+router.get('/me', authMiddleware, (req, res) => {
+  db.get(
+    'SELECT id, name, email, role FROM users WHERE id = ?',
+    [req.user.id],
+    (err, user) => res.json(user)
+  );
+});
+
 module.exports = router;
